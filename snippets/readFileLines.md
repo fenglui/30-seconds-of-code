@@ -1,13 +1,17 @@
-### readFileLines
+---
+title: readFileLines
+tags: node,array,beginner
+---
 
 Returns an array of lines from the specified file.
 
-Use `readFileSync` function in `fs` node package to create a `Buffer` from a file.
-convert buffer to string using `toString(encoding)` function.
-creating an array from contents of file by `split`ing file content line by line (each `\n`).
+- Use `fs.readFileSync()` to create a `Buffer` from a file.
+- Convert buffer to string using `buf.toString(encoding)` function.
+- Use `String.prototype.split(\n)` to create an array of lines from the contents of the file.
 
 ```js
 const fs = require('fs');
+
 const readFileLines = filename =>
   fs
     .readFileSync(filename)
@@ -26,4 +30,3 @@ contents of test.txt :
 let arr = readFileLines('test.txt');
 console.log(arr); // ['line1', 'line2', 'line3']
 ```
-

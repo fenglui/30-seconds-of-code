@@ -1,12 +1,16 @@
-### approximatelyEqual
+---
+title: approximatelyEqual
+tags: math,beginner
+---
 
 Checks if two numbers are approximately equal to each other.
 
-Use `Math.abs()` to compare the absolute difference of the two values to `epsilon`.
-Omit the third parameter, `epsilon`, to use a default value of `0.001`.
+- Use `Math.abs()` to compare the absolute difference of the two values to `epsilon`.
+- Omit the third argument, `epsilon`, to use a default value of `0.001`.
 
 ```js
-const approximatelyEqual = (v1, v2, epsilon = 0.001) => Math.abs(v1 - v2) < epsilon;
+const approximatelyEqual = (v1, v2, epsilon = 0.001) =>
+  Math.abs(v1 - v2) < epsilon;
 ```
 
 ```js

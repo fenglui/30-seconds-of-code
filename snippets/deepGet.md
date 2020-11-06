@@ -1,13 +1,20 @@
-### deepGet
+---
+title: deepGet
+tags: object,intermediate
+---
 
-Returns the target value in a nested JSON object, based on the `keys` array.
+Gets the target value in a nested JSON object, based on the `keys` array.
 
-Compare the keys you want in the nested JSON object as an `Array`.
-Use `Array.prototype.reduce()` to get value from nested JSON object one by one. 
-If the key exists in object, return target value, otherwise, return `null`.
+- Compare the keys you want in the nested JSON object as an `Array`.
+- Use `Array.prototype.reduce()` to get the values in the nested JSON object one by one.
+- If the key exists in the object, return the target value, otherwise return `null`.
 
 ```js
-const deepGet = (obj, keys) => keys.reduce((xs, x) => (xs && xs[x] ? xs[x] : null), obj);
+const deepGet = (obj, keys) =>
+  keys.reduce(
+    (xs, x) => (xs && xs[x] !== null && xs[x] !== undefined ? xs[x] : null),
+    obj
+  );
 ```
 
 ```js

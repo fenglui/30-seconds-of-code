@@ -1,9 +1,12 @@
-### truncateString
+---
+title: truncateString
+tags: string,beginner
+---
 
 Truncates a string up to a specified length.
 
-Determine if the string's `length` is greater than `num`.
-Return the string truncated to the desired length, with `'...'` appended to the end or the original string.
+- Determine if `String.prototype.length` is greater than `num`.
+- Return the string truncated to the desired length, with `'...'` appended to the end or the original string.
 
 ```js
 const truncateString = (str, num) =>

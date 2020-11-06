@@ -1,8 +1,12 @@
-### primes
+---
+title: primes
+tags: math,intermediate
+---
 
 Generates primes up to a given number, using the Sieve of Eratosthenes.
 
-Generate an array from `2` to the given number. Use `Array.prototype.filter()` to filter out the values divisible by any number from `2` to the square root of the provided number.
+- Generate an array from `2` to the given number.
+- Use `Array.prototype.filter()` to filter out the values divisible by any number from `2` to the square root of the provided number.
 
 ```js
 const primes = num => {
@@ -15,5 +19,5 @@ const primes = num => {
 ```
 
 ```js
-primes(10); // [2,3,5,7]
+primes(10); // [2, 3, 5, 7]
 ```

@@ -1,8 +1,12 @@
-### uniqueElements
+---
+title: uniqueElements
+tags: array,beginner
+---
 
-Returns all unique values of an array.
+Finds all unique values in an array.
 
-Use ES6 `Set` and the `...rest` operator to discard all duplicated values.
+- Create a `new Set()` from the given array to discard duplicated values.
+- Use the spread operator (`...`) to convert it back to an array.
 
 ```js
 const uniqueElements = arr => [...new Set(arr)];

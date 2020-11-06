@@ -1,8 +1,11 @@
-### isAbsoluteURL
+---
+title: isAbsoluteURL
+tags: string,browser,regexp,intermediate
+---
 
-Returns `true` if the given string is an absolute URL, `false` otherwise.
+Checks if the given string is an absolute URL.
 
-Use a regular expression to test if the string is an absolute URL.
+- Use `RegExp.prototype.test()` to test if the string is an absolute URL.
 
 ```js
 const isAbsoluteURL = str => /^[a-z][a-z0-9+.-]*:/.test(str);

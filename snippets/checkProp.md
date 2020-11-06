@@ -1,37 +1,31 @@
-### checkProp
+---
+title: checkProp
+tags: function,object,intermediate
+---
 
-Given a `predicate` function and a `prop` string, this curried function will then take an `object` to inspect by calling the property and passing it to the predicate.
+Creates a function that will invoke a predicate function for the specified property on a given object.
 
-Summon `prop` on `obj`, pass it to a provided `predicate` function and return a masked boolean.
+- Return a curried function, that will invoke `predicate` for the specified `prop` on `obj` and return a boolean.
 
 ```js
 const checkProp = (predicate, prop) => obj => !!predicate(obj[prop]);
 ```
 
 ```js
-
-
-
-
-
-
-
-
-
 const lengthIs4 = checkProp(l => l === 4, 'length');
 lengthIs4([]); // false
-lengthIs4([1,2,3,4]); // true
-lengthIs4(new Set([1,2,3,4])); // false (Set uses Size, not length)
+lengthIs4([1, 2, 3, 4]); // true
+lengthIs4(new Set([1, 2, 3, 4])); // false (Set uses Size, not length)
 
 const session = { user: {} };
-const validUserSession = checkProps(u => u.active && !u.disabled, 'user');
+const validUserSession = checkProp(u => u.active && !u.disabled, 'user');
 
 validUserSession(session); // false
 
 session.user.active = true;
 validUserSession(session); // true
 
-const noLength(l => l === undefined, 'length');
+const noLength = checkProp(l => l === undefined, 'length');
 noLength([]); // false
 noLength({}); // true
 noLength(new Set()); // true

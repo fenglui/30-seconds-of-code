@@ -1,9 +1,12 @@
-### uniqueElementsBy
+---
+title: uniqueElementsBy
+tags: array,intermediate
+---
 
-Returns all unique values of an array, based on a provided comparator function.
+Finds all unique values of an array, based on a provided comparator function.
 
-Use `Array.prototype.reduce()` and `Array.prototype.some()` for an array containing only the first unique occurrence of each value, based on the comparator function, `fn`.
-The comparator function takes two arguments: the values of the two elements being compared.
+- Use `Array.prototype.reduce()` and `Array.prototype.some()` for an array containing only the first unique occurrence of each value, based on the comparator function, `fn`.
+- The comparator function takes two arguments: the values of the two elements being compared.
 
 ```js
 const uniqueElementsBy = (arr, fn) =>
